@@ -30,7 +30,6 @@ op:
     loginSecret:
     loginTenantId:
     resourceGroup:
-    location:
     name:
     # begin optional args
     loginType:
