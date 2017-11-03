@@ -1,5 +1,5 @@
-name: github.com/opspec-pkgs/azure.application.insights.instrumentationkey.get
-description: get the application insights instrumentation key
+name: github.com/opspec-pkgs/azure.appinsights.instrumentationkey.get
+description: gets an azure application insights instrumentation key
 inputs:
   subscriptionId:
     string:
@@ -31,14 +31,20 @@ inputs:
       constraints: { enum: [user, sp]}
       description: type of login; 'user' (default) or 'sp' for service principal
       default: user
-version: 1.0.0
+outputs:
+  instrumentationKey:
+    string:
+      constraints: { minLength: 1 }
+      description: application insights instrumentation key
+      isSecret: true
+version: 2.0.0
 run:
   container:
     image: { ref: 'azuresdk/azure-cli-python:2.0.17' }
     cmd: [ /cmd.sh ]
-    files: { /cmd.sh }
-    stdOut:
-      instrumentationKey=: instrumentationKey
+    files:
+      /cmd.sh:
+      /instrumentationKey: $(instrumentationKey)
     envVars:
       subscriptionId:
       loginId:

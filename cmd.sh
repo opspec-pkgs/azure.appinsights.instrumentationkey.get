@@ -33,4 +33,4 @@ instrumentationKey=$(az resource show \
     --query "properties.InstrumentationKey" \
     --output tsv)
 
-echo "instrumentationKey=$instrumentationKey"
+cat "$instrumentationKey" > /instrumentationKey
