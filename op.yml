@@ -37,7 +37,7 @@ outputs:
       constraints: { minLength: 1 }
       description: application insights instrumentation key
       isSecret: true
-version: 2.0.0
+version: 2.0.1
 run:
   container:
     image: { ref: 'azuresdk/azure-cli-python:2.0.17' }

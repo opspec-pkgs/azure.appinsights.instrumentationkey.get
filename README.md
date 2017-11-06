@@ -15,20 +15,20 @@ format
 ## install
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/azure.appinsights.instrumentationkey.get#2.0.0
+opctl pkg install github.com/opspec-pkgs/azure.appinsights.instrumentationkey.get#2.0.1
 ```
 
 ## run
 
 ```
-opctl run github.com/opspec-pkgs/azure.appinsights.instrumentationkey.get#2.0.0
+opctl run github.com/opspec-pkgs/azure.appinsights.instrumentationkey.get#2.0.1
 ```
 
 ## compose
 
 ```yaml
 op:
-  pkg: { ref: github.com/opspec-pkgs/azure.appinsights.instrumentationkey.get#2.0.0 }
+  pkg: { ref: github.com/opspec-pkgs/azure.appinsights.instrumentationkey.get#2.0.1 }
   inputs:
     subscriptionId:
     loginId:

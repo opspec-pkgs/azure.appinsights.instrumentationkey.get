@@ -5,6 +5,12 @@ All notable changes will be documented in this file in accordance with
 
 ## \[Unreleased]
 
+## \[2.0.1] - 2017-11-06
+
+### Fixed
+
+- Can't run successfully
+
 ## \[2.0.0] - 2017-11-03
 
 ### Changed
